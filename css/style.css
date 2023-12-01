@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #7349bd;
+    --secondary-color: #8259a3;
+    --text-color: #ddd;
+    --bg-color: #202020;
+    --shadow-color: rgb(115 73 189 / 70%);
+    --shadow-hover: rgb(115 73 189 / 90%);
+    --transition: transform 250ms ease-in-out;
+}
+
 /* reset styles */
 
 h1,
@@ -40,12 +50,20 @@ img {
 body {
     line-height: 1.25;
     font-family: "montserrat";
-    color: #ddd;
-    background-color: #202020;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     background-image: url(../img/background-body.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
+}
+
+a {
+    transition: var(--transition);
+}
+
+a:hover {
+    transform: translateY(-3px);
 }
 
 .section {
@@ -64,9 +82,16 @@ body {
     border-radius: 36px;
     font-size: 18px;
     border: none;
-    background-color: #7349bd;
-    color: #ddd;
-    box-shadow: rgb(115 73 189 / 70%) 0px -10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: var(--shadow-color) 0px -10px 20px;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    box-shadow: var(--shadow-hover) 0px -10px 20px;
 }
 
 .title {
@@ -97,7 +122,7 @@ body {
     display: block;
 
     & svg {
-        stroke: #7349bd;
+        stroke: var(--primary-color);
         fill: transparent;
     }
 }
@@ -123,7 +148,7 @@ body {
 
     & span {
         font-weight: 700;
-        color: #8259a3;
+        color: var(--secondary-color);
     }
 }
 
@@ -165,7 +190,7 @@ body {
 
     & svg {
         position: absolute;
-        stroke: #ddd;
+        stroke: var(--text-color);
         fill: transparent;
         top: 50%;
         left: 50%;
@@ -177,7 +202,7 @@ body {
     position: relative;
     width: 64px;
     height: 64px;
-    background: radial-gradient(circle, #7349bd 25%, transparent 65%);
+    background: radial-gradient(circle, var(--primary-color) 25%, transparent 65%);
 }
 
 /* form */
@@ -187,7 +212,7 @@ body {
     font-weight: 700;
 
     & span {
-        color: #7349bd;
+        color: var(--primary-color);
     }
 }
 
@@ -200,9 +225,9 @@ body {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
-    border: solid 2px #ddd;
+    border: solid 2px var(--text-color);
     background-color: transparent;
-    color: #ddd;
+    color: var(--text-color);
 }
 
 .contact-form button {
@@ -270,7 +295,7 @@ body {
 
         & span {
             font-weight: 700;
-            color: #8259a3;
+            color: var(--secondary-color);
         }
     }
 
