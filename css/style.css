@@ -50,6 +50,7 @@ body {
 
 .section {
     text-align: center;
+    padding: 32px 0;
 }
 
 .container {
@@ -111,12 +112,14 @@ body {
     padding-top: 64px;
     padding-bottom: 0;
     height: calc(100vh - 48px);
+    min-height: 572px;
     max-height: 720px;
     overflow: hidden;
 }
 
 .hero .title {
     position: relative;
+
 
     & span {
         font-weight: 700;
@@ -206,6 +209,10 @@ body {
 }
 
 /* footer */
+.nav-list {
+    margin-top: 16px;
+}
+
 .nav-list .item {
     display: flex;
     justify-content: space-between;
@@ -230,6 +237,16 @@ body {
         text-align: left;
     }
 
+    .title {
+        font-size: 40px;
+    }
+
+
+    .text {
+        font-size: 24px;
+    }
+
+
     /* header */
     .social-link svg {
         width: 48px;
@@ -246,9 +263,9 @@ body {
     }
 
     .hero .title {
+        text-align: left;
         position: relative;
         width: 592px;
-        font-size: 40px;
 
         & span {
             font-weight: 700;
@@ -274,5 +291,67 @@ body {
         left: 50%;
         transform: translateX(0);
         width: 520px;
+    }
+
+    /* benefits */
+    .title {
+        text-align: center;
+    }
+
+    .benefits-list {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .benefits-item {
+        align-items: start;
+        width: calc(100% / 3 - 24px);
+
+        & h3 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        & p {
+            font-size: 18px;
+        }
+    }
+
+    /* footer */
+    .footer .wrapper {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .footer .text {
+        text-align: center;
+    }
+
+    .part-footer {
+        font-size: 24px;
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .part-contact-form {
+        width: 50%;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 24px;
+
+        & button {
+            font-size: 24px;
+            width: fit-content;
+        }
     }
 }
