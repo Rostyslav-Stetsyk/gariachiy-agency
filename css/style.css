@@ -202,6 +202,7 @@ body {
     border-radius: 8px;
     border: solid 2px #ddd;
     background-color: transparent;
+    color: #ddd;
 }
 
 .contact-form button {
