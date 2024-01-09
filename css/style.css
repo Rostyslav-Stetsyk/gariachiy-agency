@@ -175,6 +175,18 @@ a:hover {
     width: 288px;
 }
 
+.author-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 264px;
+    bottom: 92px;
+    color: var(--text-color);
+    padding: 8px 16px;
+    background-color: var(--shadow-color);
+    border-radius: 24px;
+}
+
 /* benefits */
 
 .benefits-list {
@@ -319,6 +331,16 @@ a:hover {
         left: 50%;
         transform: translateX(0);
         width: 520px;
+    }
+
+    .author-name {
+        left: 45%;
+        width: 412px;
+        height: 66px;
+        font-size: 40px;
+        top: 436px;
+        border-radius: 24px;
+        text-align: center;
     }
 
     /* benefits */
